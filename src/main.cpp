@@ -3,7 +3,7 @@
 #include <memory>
 #include <exception>
 #include <typeinfo>
-#include "Math/Tensors/Tensors.hpp"
+#include "Math/Tensors/Tensor.hpp"
 
 int main()
 {

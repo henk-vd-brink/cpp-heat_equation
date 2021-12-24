@@ -24,16 +24,4 @@ public:
     }
 };
 
-template <typename T>
-Vector<T> operator*(const Matrix<T> &lhs, const Vector<T> &rhs)
-{
-    Vector<T> temp(rhs.length);
-
-    for (auto it = lhs.mat.begin(); it != lhs.mat.end(); it++)
-    {
-        temp.data[it->first[0]] += it->second * rhs.data[it->first[1]];
-    }
-    return temp;
-}
-
 #endif // MATRIX_HPP
