@@ -1,6 +1,8 @@
 #ifndef VECTOR_HPP
 #define VECTOR_HPP
 
+#include <math.h>
+
 template <typename T>
 class Vector
 {
@@ -126,6 +128,17 @@ T dot(const Vector<T> &lhs, const Vector<T> &rhs)
         temp += lhs.data[i] + rhs.data[i];
     }
     return temp;
+}
+
+template <typename T>
+T norm(const Vector<T> &vector)
+{
+    if (vector.length == 0)
+    {
+        return 0;
+    }
+
+    return pow(dot(vector, vector), 0.5);
 }
 
 #endif // VECTOR_HPP

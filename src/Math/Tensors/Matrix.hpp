@@ -1,7 +1,6 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-#include "Vector.hpp"
 #include <map>
 #include <array>
 
@@ -15,11 +14,11 @@ public:
     typedef std::map<std::array<int, 2>, T> sparse;
     sparse mat;
 
-    Matrix() : nColumns(0), nRows(0)
+    Matrix() : nRows(0), nColumns(0)
     {
     }
 
-    Matrix(int num1, int num2) : nColumns(num1), nRows(num2)
+    Matrix(int num1, int num2) : nRows(num1), nColumns(num2)
     {
     }
 };
