@@ -2,8 +2,8 @@
 #define HEAT_HPP
 #define _USE_MATH_DEFINES
 
-#include "CG.hpp"
 #include <math.h>
+#include "Tensors/Tensor.hpp"
 
 template <int nDim, typename T>
 class Heat
@@ -34,27 +34,42 @@ public:
 
     Vector<T> solve(T t) const
     {
+        float tol = 1;
+        int maxIter = 10;
 
         int size = pow(nGridPoints, nDim);
         Vector<T> b = initial(nGridPoints, size);
-        Vector<T> x(b.length);
 
-        for (auto i = 0; i * dt < t; i++)
+        struct state
         {
-            std::cout << "---start---" << std::endl;
-            b.print();
-            x.print();
-            std::cout << "---end---" << std::endl;
+            float t;
+            Vector<T> x;
+            Matrix<T> m;
+        };
 
-            int k = conjugateGradient<T>(M, b, x, 1e-3, 100);
-            b = x;
-            std::cout << k << std::endl;
+        Matrix<T> l_m(10, 10);
 
-            for (auto i = 0; i < b.length; i++)
-            {
-                x.data[i] = 0;
-            }
-        }
+        struct state heatState;
+        heatState.x = b;
+        heatState.m = l_m;
+
+        // struct systemState l_systemState;
+        // l_systemState.stateVector = b;
+        // l_systemState.stateMatrix = M;
+
+        // l_systemState.stateVector.print();
+
+        // for (auto i = 0; i * dt < t; i++)
+        // {
+        //     int k = conjugateGradient<T>(systemState, 1e-3, 100);
+        //     b = x;
+        //     std::cout << k << std::endl;
+
+        //     for (auto i = 0; i < b.length; i++)
+        //     {
+        //         x.data[i] = 0;
+        //     }
+        // }
         return b;
     }
 
@@ -85,7 +100,6 @@ public:
         Heat<nDim - 1, T>::generateMatrix(column, alpha, dt, a_nGridPoints, M);
     }
 
-    // private:
     //     void printMatrix()
     //     {
     //         for (auto it = M.mat.begin(); it != M.mat.end(), ++it)

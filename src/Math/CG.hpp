@@ -4,18 +4,15 @@
 #include "Tensors/Tensor.hpp"
 
 template <typename T>
-int conjugateGradient(const Matrix<T> &A, const Vector<T> &b, Vector<T> &x, T tol, int maxIter)
+int conjugateGradient(T tol, int maxIter)
 {
     int nDim = b.length;
-    Vector<T> p(nDim);
-    Vector<T> r(nDim);
-    Vector<T> rNew(nDim);
+    Vector<T> l_p(nDim);
+    Vector<T> l_r(nDim);
+    Vector<T> l_rNew(nDim);
 
     r = b - A * x;
-    x.print();
-    b.print();
     int k = 0;
-    return 1;
 
     // for (int i = 0; i < maxIter; i++)
     // {
