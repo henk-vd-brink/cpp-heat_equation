@@ -13,7 +13,6 @@ public:
 
     CGSolver(Heat<nDim, T> *heat) : heatObject(heat)
     {
-        generateMatrix(pow(heat->nGridPoints, nDim), heat->alpha, heat->dt, heat->nGridPoints, M);
     }
 
     static void generateMatrix(int col, T alpha, T dt, int m, Matrix<T> &M)
@@ -33,7 +32,10 @@ public:
 
     Vector<T> solve(T t)
     {
+        generateMatrix(pow(heatObject->nGridPoints, nDim), heatObject->alpha, heatObject->dt, heatObject->nGridPoints, M);
+
         int size = pow(heatObject->nGridPoints, nDim);
+
         Vector<T> b = heatObject->initialCondition;
         Vector<T> x(b.length);
 
