@@ -1,4 +1,4 @@
-# C++ Solving the N dimensional Heat Equation.
+# C++ Solving the N dimensional Heat Equation
 
 This is an introductionary project to get familiar with the C++ syntax and methodology. 
 
@@ -36,7 +36,7 @@ This is an introductionary project to get familiar with the C++ syntax and metho
 
 # Usage 
 
-To to the root folder and:
+Go to the root folder and:
 
 ```bash
 make clean && make && ./bin/main
