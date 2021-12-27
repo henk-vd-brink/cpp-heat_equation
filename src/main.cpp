@@ -23,7 +23,7 @@ void writeVectorToFile(Vector<double> &vector, const std::string &fileName)
     }
     else
     {
-        std::cout << "Could not open file" << std::endl;
+        std::cout << "Could not open file " << fileName << std::endl;
     }
 }
 
