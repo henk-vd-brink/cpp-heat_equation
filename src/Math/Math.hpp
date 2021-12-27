@@ -1,2 +1,3 @@
 #include "Heat.hpp"
-#include "Tensors/Tensor.hpp"
+#include "Tensors/Tensors.hpp"
+#include "Solvers/Solvers.hpp"

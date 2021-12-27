@@ -33,3 +33,4 @@
 
 # Testing folder
 test
+.venv/

@@ -125,7 +125,7 @@ T dot(const Vector<T> &lhs, const Vector<T> &rhs)
     T temp = 0;
     for (int i = 0; i < lhs.length; i++)
     {
-        temp += lhs.data[i] + rhs.data[i];
+        temp += lhs.data[i] * rhs.data[i];
     }
     return temp;
 }
