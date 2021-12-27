@@ -1,7 +1,6 @@
-# Introduction
+# C++ Solving the Heat Equation in N dimensions.
 
-This is a small program I 
-
+This is an introductionary project to get familiar with the C++ syntax and methodology. 
 
 # Structure
 ```bash
@@ -34,4 +33,12 @@ This is a small program I
     ├── figures
     │   └── compare.png
     └── plot.py
+```
+
+# Usage 
+
+To to the root folder and:
+
+```bash
+make clean && make && ./bin/main
 ```
