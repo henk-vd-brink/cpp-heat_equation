@@ -1,4 +1,4 @@
-# C++ Solving the Heat Equation in N dimensions.
+# C++ Solving the N dimensional Heat Equation.
 
 This is an introductionary project to get familiar with the C++ syntax and methodology. 
 
@@ -42,3 +42,10 @@ To to the root folder and:
 ```bash
 make clean && make && ./bin/main
 ```
+
+For comparison plot (only works for 1D at the moment):
+```bash
+python visualisation/plot.py
+```
+
+See comparison plot in `visualisation/figures/comparison.png`
