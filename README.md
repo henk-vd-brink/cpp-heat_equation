@@ -4,7 +4,7 @@ This is a small program I
 
 
 # Structure
-
+```bash
 .
 ├── Makefile
 ├── README.md
@@ -71,3 +71,4 @@ This is a small program I
     ├── figures
     │   └── compare.png
     └── plot.py
+```
