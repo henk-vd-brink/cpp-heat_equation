@@ -12,7 +12,6 @@ This is an introductionary project to get familiar with the C++ syntax and metho
 ├── data
 │   ├── cgSolution.txt
 │   └── exactSolution.txt
-├── include
 ├── src
 │   ├── Math
 │   │   ├── Heat.hpp
