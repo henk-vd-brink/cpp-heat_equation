@@ -48,4 +48,4 @@ For comparison plot (only works for 1D at the moment):
 python visualisation/plot.py
 ```
 
-See comparison plot in `visualisation/figures/comparison.png`
+See comparison plot in 'visualisation/figures/comparison.png'
