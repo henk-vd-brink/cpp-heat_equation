@@ -1,8 +1,30 @@
-# C++ Solving the N dimensional Heat Equation
+## About the Project
+This is an introductionary project to get familiar with the C++ syntax and methodology.
 
-This is an introductionary project to get familiar with the C++ syntax and methodology. 
+## Getting Started
 
-# Structure
+### Installation
+```
+git clone https://github.com/henk-vd-brink/cpp-heat_equation.git
+cd cpp-heat_equation
+```
+
+### Build
+```
+make
+```
+
+### Run
+```
+./bin/main
+```
+
+To see a visualisation in 'visualisation/figures/comparison.png' (only works for 1D atm).
+```
+python visualisation/plot.py
+```
+
+## Structure
 ```bash
 .
 ├── Makefile
@@ -33,18 +55,3 @@ This is an introductionary project to get familiar with the C++ syntax and metho
     │   └── compare.png
     └── plot.py
 ```
-
-# Usage 
-
-Go to the root folder and:
-
-```bash
-make clean && make && ./bin/main
-```
-
-For comparison plot (only works for 1D at the moment):
-```bash
-python visualisation/plot.py
-```
-
-See comparison plot in 'visualisation/figures/comparison.png'
